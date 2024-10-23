@@ -49,7 +49,7 @@ async function dataDisplay() {
                 <td>${key.Employecode}</td>
                 <td>
                     <a href="#" onclick="mydel('${key.id}')">
-                        <img src="/delete.png" width="30" height="30">
+                        <img src="/image/delete.png" width="30" height="30">
                     </a>
                 </td>
 

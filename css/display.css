@@ -16,7 +16,7 @@
   
   /* Topbar styling */
   .Topbar {
-    background-color: #333;
+    background-color: violet;
     color: white;
     display: flex;
     align-items: center;
@@ -33,16 +33,17 @@
     font-size: 24px;
   }
   
-  /* Sidebar styling */
+  /* Menu and Layout */
   .menu {
     display: flex;
     flex-direction: row;
     height: calc(100vh - 60px); /* Full height minus topbar */
   }
   
+  /* Sidebar styling */
   .sidebar {
     width: 250px;
-    background-color: #444;
+    background-color:grey;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -69,32 +70,26 @@
   .form {
     flex-grow: 1;
     padding: 40px;
-    background-color: #fff;
-    border-left: 2px solid #ddd;
   }
   
   .form label {
     display: block;
     font-size: 16px;
-    margin-bottom: 8px;
-    color: #333;
+    margin: 10px 0;
   }
   
   .form input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
   }
   
   #button {
-    display: inline-block;
     padding: 12px 20px;
-    font-size: 16px;
+    background-color: #007bff;
     color: white;
-    background-color: #007BFF;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -105,17 +100,43 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .Topbar h1 {
-      font-size: 20px;
-    }
   
+  /* Tablets */
+  @media (max-width: 1024px) {
     .sidebar {
       width: 200px;
     }
   
+    .Topbar h1 {
+      font-size: 20px;
+    }
+  
     .sidebar .head a {
       font-size: 16px;
+    }
+  
+    .form {
+      padding: 30px;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .Topbar h1 {
+      font-size: 18px;
+    }
+  
+    .Topbar #logo img {
+      height: 30px;
+    }
+  
+    .sidebar {
+      width: 180px;
+    }
+  
+    .sidebar .head a {
+      font-size: 14px;
+      padding: 10px 15px;
     }
   
     .form {
@@ -130,5 +151,56 @@
       padding: 10px 15px;
       font-size: 14px;
     }
+  
+    /* Stack sidebar on top of content on small screens */
+    .menu {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+    }
   }
   
+  /* Extra Small Screens (Phones in Portrait) */
+  @media (max-width: 500px) {
+    .Topbar {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .Topbar h1 {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  
+    .form {
+      padding: 15px;
+    }
+  
+    .form label {
+      font-size: 14px;
+    }
+  
+    .form input {
+      padding: 8px;
+    }
+  
+    #button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  
+    /* Adjust table layout for smaller screens */
+    table {
+      width: 100%;
+      font-size: 8px;
+    }
+  
+    th, td {
+      padding: 3px;
+    }
+  }

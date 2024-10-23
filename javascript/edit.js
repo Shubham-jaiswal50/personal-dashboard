@@ -105,7 +105,7 @@ async function dataDisplay() {
                 <td>${key.Employecode}</td>
                 <td>
                     <a href="#" onclick="editDisplay('${key.id}')">
-                        <img src="/pencil.png" width="30" height="30">
+                        <img src="/image/pencil.png" width="30" height="30">
                     </a>
                 </td>
             </tr>

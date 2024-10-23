@@ -1,7 +1,7 @@
-document.getElementById("name1").addEventListener("keyup",showdata)
-
-async function showdata() {
-    let myans=  document.getElementById("name1").value
+document.getElementById("bname").addEventListener("keyup", searchDisplay);
+async function searchDisplay()
+{
+  let bname=document.getElementById("bname").value;
     let Table=`<table width="90%" border="1" bgcolor="red">
               <tr bgcolor="blue">
               <th> Enter name</th>
@@ -14,12 +14,12 @@ async function showdata() {
               `
 
               let api ="http://localhost:4000/id"
-              let mydata= await fetch(api)
-              let myinfo= await mydata.json();
+              let myobj= await fetch(api)
+              let mydata= await myobj.json();
 
-              myinfo.map((key)=>{
+              mydata.map((key)=>{
                 let str=key.Employecode
-                let myval=str.includes(myans);
+                let myval=str.includes(bname);
 
                 if(myval==true){
                     Table+=`<tr>
@@ -40,6 +40,6 @@ async function showdata() {
                 }
               })
               Table+="</Table>"
-              document.getElementById("demo2").innerHTML=Table
+              document.getElementById("demo").innerHTML=Table
     
 }

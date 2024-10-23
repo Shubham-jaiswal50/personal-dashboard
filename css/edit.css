@@ -16,7 +16,7 @@
   
   /* Topbar styling */
   .Topbar {
-    background-color: #333;
+    background-color: violet;
     color: white;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
     left: 0;
     width: 250px;
     height: calc(100vh - 60px); /* Full height minus topbar */
-    background-color: #444;
+    background-color: grey;
     padding-top: 20px;
   }
   
