@@ -1,0 +1,134 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Topbar styling */
+  .Topbar {
+    background-color: violet;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 60px;
+  }
+  
+  .Topbar #logo img {
+    height: 40px;
+  }
+  
+  .Topbar h1 {
+    font-size: 24px;
+  }
+  
+  /* Sidebar styling */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 60px); /* Full height minus topbar */
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: grey;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .sidebar .head {
+    margin: 10px 0;
+  }
+  
+  .sidebar .head a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 20px;
+    display: block;
+  }
+  
+  .sidebar .head a:hover {
+    background-color: #555;
+  }
+  
+  /* Form styling */
+  .form {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+  }
+  
+  .form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Topbar h1 {
+      font-size: 20px;
+    }
+  
+    .sidebar {
+      width: 200px;
+    }
+  
+    .sidebar .head a {
+      font-size: 16px;
+    }
+  
+    .form {
+      padding: 20px;
+    }
+  
+    .form input {
+      font-size: 14px;
+    }
+  
+    #button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
